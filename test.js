@@ -42,7 +42,7 @@ class Table {
     });
 		newRow.getRow().addEventListener("mousemove", event => {
       if (this.onmove === false) return ;
-			this.bodyOfTable.insertBefore(this.dragElement.getRow(), newRow.getRow());
+			this.bodyOfTable.insertBefore(this.dragElement.getRow(), newRow.getRow().nextSibling);
 			this.dragElement.getRow().style.backgroundColor = "#67ddf7"
     });
 	}

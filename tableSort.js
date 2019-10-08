@@ -42,7 +42,7 @@ class Table {
     });
 		newRow.getRow().addEventListener("mousemove", event => {
       if (this.onmove === false) return ;
-			this.bodyOfTable.insertBefore(this.dragElement.getRow(), newRow.getRow().nextSibling);
+			this.bodyOfTable.insertBefore(this.dragElement.getRow(), newRow.getRow());
 			this.dragElement.getRow().style.backgroundColor = "#67ddf7"
     });
 	}
@@ -55,6 +55,7 @@ class Row{
 		let col = document.createElement("td");
 		col.style.border = "1px solid";
 		this.myRow.style.height = "50px";
+		this.myRow.style.cursor = "move";
 		col.innerHTML = contenu;
 		this.myRow.appendChild(col);
 	}
